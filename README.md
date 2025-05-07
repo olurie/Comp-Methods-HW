@@ -1,6 +1,6 @@
  Computational Methods – Python Notebooks
 
-This repository contains Python-based Jupyter notebooks for a course on **Computational Methods**.
+This repository contains Python-based Jupyter notebooks for our course on **Computational Methods**.
 
 ## Requirements
 
