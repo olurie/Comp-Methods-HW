@@ -1,4 +1,7 @@
-!!pip install numpy scipy matplotlib
+import os
+os.system('pip install numpy')
+os.system('pip install scipy')
+os.system('pip install matplotlib')
 import numpy as np
 from scipy import interpolate
 from scipy.linalg import lu, solve_triangular
@@ -225,15 +228,14 @@ P_eq, = fsolve(excess_demand, P_eq_guess)
 Q_eq = D(P_eq)
 
 
-# Plot demand and individual supply
-plt.figure(figsize=(10, 6)) #create a figure
-plt.plot(P_fine, D(P_fine), label="Market Demand D(P)") #plot the demand
-plt.plot(P_fine, m * q_interp, label="Aggregate Supply (m*q(P))") #plot the aggregate supply
-plt.xlabel("Price") #x-axis label
-plt.ylabel("Quantity") #y-axis label
-plt.title("Market Demand and Aggregate Supply") #title
-plt.legend() #legend
-plt.grid(True) #grid
+plt.figure(figsize=(10, 6)) 
+plt.plot(P_fine, D(P_fine), label="Market Demand D(P)") 
+plt.plot(P_fine, m * q_interp, label="Aggregate Supply (m*q(P))") 
+plt.xlabel("Price") 
+plt.ylabel("Quantity") 
+plt.title("Market Demand and Aggregate Supply") 
+plt.legend() 
+plt.grid(True) 
 plt.savefig('cournot_plot.png', dpi=300, bbox_inches='tight')
 plt.show()
 
@@ -241,5 +243,87 @@ print(f"Equilibrium price: {P_eq:.4f}, Quantity: {Q_eq:.4f}")
 print("Increasing m leads to more competition, pushing price down and quantity up.\nIncreasing α makes costs higher, reducing supply and increasing price.\nIncreasing η makes demand more elastic: flattens demand, leading to more responsive price changes.") 
 
 
+#2.10
+P_r, P_a = np.linspace(0.5, 12.5, 4), np.linspace(0.5, 12.5, 4)
 
+G = np.array(
+    [
+    [11.5, 70.9, 98.3, 93.7],
+    [31.1, 82.5, 101.9, 89.3],
+    [18.7, 62.1, 73.5, 52.9],
+    [-25.7, 9.7, 13.1, -15.5]
+]
+)
+
+spline_G = interpolate.RectBivariateSpline(P_r, P_a, G)
+
+Nplot = 100 
+P_r_fine, P_a_fine = np.linspace(0.5, 12.5, Nplot), np.linspace(0.5, 12.5, Nplot) 
+profit_matrix = spline_G(P_r_fine, P_a_fine) 
+
+max_idx = np.unravel_index(np.argmax(profit_matrix), profit_matrix.shape) 
+P_r_optimal, P_a_optimal, profit_optimal = P_r_fine[max_idx[0]], P_a_fine[max_idx[1]], profit_matrix[max_idx] 
+
+print(f"(a) Optimal prices from interpolation: pR* = {P_r_optimal:.2f}, pA* = {P_a_optimal:.2f}\nMaximum approximated profit: G(pR*, pA*) = {profit_optimal:.2f}")
+
+def true_profit(prices):
+    P_r, P_a = prices
+    reader_demand = 10 - P_r 
+    ad_demand = 20 - P_a - 0.5 * P_r  
+    profit = (P_r - 0.1) * reader_demand + (P_a - 0.1) * ad_demand 
+    return profit*(-1)  
+
+res = minimize(true_profit, x0=[5.0, 5.0], bounds=[(0.5, 12.5), (0.5, 12.5)])
+P_r_opt, P_a_opt = res.x
+profit_opt_true = -res.fun 
+
+print(f"(b) Optimal prices from true profit: pR* = {P_r_opt:.2f}, pA* = {P_a_opt:.2f}\nMaximum true profit: G(pR*, pA*) = {profit_opt_true:.2f}")
+
+for Nplot in [100, 1000, 10000]:
+    P_r_fine, P_a_fine = np.linspace(0.5, 12.5, Nplot), np.linspace(0.5, 12.5, Nplot)
+    profit_matrix = spline_G(P_r_fine, P_a_fine)
+    max_idx = np.unravel_index(np.argmax(profit_matrix), profit_matrix.shape)
+    P_r_optimal, P_a_optimal, profit_optimal = P_r_fine[max_idx[0]], P_a_fine[max_idx[1]], profit_matrix[max_idx]
+    error = abs(profit_optimal - profit_opt_true)
+    print(f"Nplot = {Nplot}: Approx Profit = {profit_optimal:.2f}, Error = {error:.4f}")
+
+#2.11
+costs = np.array([
+    10, 70, 100, 80, 0,  
+    130, 90, 120, 110, 0, 
+    50, 30, 80, 10, 0     
+])
+
+S = [11, 13, 10]
+D = [5, 7, 13, 6, 3]
+
+source_num = 3
+destination_num = 5
+n_variables = source_num * destination_num 
+
+S_constraints   = np.zeros((source_num, n_variables)) 
+for i in range(source_num):
+    for j in range(destination_num):
+        S_constraints[i, i * destination_num + j] = 1 
+
+D_constraints = np.zeros((destination_num, n_variables)) 
+for j in range(destination_num):
+    for i in range(source_num):
+        D_constraints[j, i * destination_num + j] = 1 
+
+A_eq = np.vstack([S_constraints, D_constraints]) 
+b_eq = np.array(S + D) 
+
+bounds = [(0, None)] * n_variables 
+
+res = linprog(c=costs, A_eq=A_eq, b_eq=b_eq, bounds=bounds, method='highs') 
+
+
+X = res.x.reshape((source_num, destination_num)) 
+print("Optimal transport plan:")
+for i in range(source_num):
+    for j in range(destination_num):
+        if X[i, j] > 0:
+            print(f"A{i+1} -> B{j+1}: {X[i, j]:.2f} tons") 
+print(f"\nMinimum total cost: {res.fun:.2f}") 
 
