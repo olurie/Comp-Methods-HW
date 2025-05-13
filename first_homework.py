@@ -18,11 +18,9 @@ A = np.array([
     [1, 7, 17, 4]
 ])
 b = np.array([1, 2, 1, 1])
-
 P, L, U = lu(A)
 y = np.linalg.solve(L, P @ b)
 x = np.linalg.solve(U, y)
-
 print("Exercise 2.1: LU Decomposition")
 print(f'product of L and U{L@U}')
 print("Solution x =", x)
@@ -39,58 +37,39 @@ def system(vars):
 sol = fsolve(system, [0.4, 0.6, 1])
 c1, c2, lam = sol
 print(f"c1 = {c1:.4f}, c2 = {c2:.4f}, λ = {lam:.4f}")
-
 def U(c): 
     c1, c2 = c
     if c1 <= 0 or c2 <= 0: #check if the initial guesses are positive
         return np.inf   #if not, return infinity  
     return 1 / c1 + 1 / c2
-
 constraint = { 
     'type': 'eq',
     'fun': lambda c: c[0] + c[1] - 1
 }
 result = minimize(U, [0.4, 0.6], method='SLSQP', constraints=constraint)
-
-# Extract results
 c1_opt, c2_opt = result.x
-
 print("Solution using minimization :")
 print(f"c1 = {c1_opt:.4f}")
 print(f"c2 = {c2_opt:.4f}")
 print(f"Utility at the equilibrium = {U([c1_opt, c2_opt]):.4f}")
 
-# === Exercise 2.3: Interpolation ===
-
 #2.3
-
-def F(x):
-    return x*np.cos(x**2)
-
-def golden_search_minimize (F, lower_bound, upper_bound):
-
-    return golden(F,brack=(lower_bound,upper_bound)) 
-
+def F(x):return x*np.cos(x**2)
+def golden_search_minimize (F, lower_bound, upper_bound):return golden(F,brack=(lower_bound,upper_bound)) 
 interval = [0,5]
 subinterval_num = 6
 subinterval_bounds = np.linspace(interval[0],interval[1],subinterval_num) 
 subintervals = [(subinterval_bounds[i],subinterval_bounds[i+1]) for i in range(len(subinterval_bounds)-1)] 
-
 minima = [golden_search_minimize(F,subintervals[i][0],subintervals[i][1]) for i in range(len(subintervals))] 
 global_minimum_location = np.argmin(minima) 
-
 for i in range(len(subintervals)):
     print(f'The local minimum on [{subintervals[i][0]},{subintervals[i][1]} is {minima[i]:.4f}]\n') 
-
 print(f'\nThe global minimum is {minima[global_minimum_location]}') 
 
 #2.4
-
-gamma = 0.5
-beta = 1
+gamma, beta = 0.5, 1
 def neg_U(c, r, w):
     c2, c3 = c 
-    #rhs = w + w / (1 + r) 
     c1 = (w + w / (1 + r)) - c2 / (1 + r) - c3 / ((1 + r)**2) 
     if c1 <= 0 or c2 <= 0 or c3 <= 0: 
         return np.inf  
@@ -104,43 +83,31 @@ def optimize(r, w):
     c1_opt =  w + w / (1 + r)  - c2_opt / (1 + r) - c3_opt / ((1 + r)**2) 
     U = neg_U((c2_opt, c3_opt), r, w) * (-1)
     return U
-r = 0
-w = 1
-rhs = w + w / (1 + r) #right hand side of the budget constraint
-
-initial_guess = [0.3, 0.3] #initial guess for c2 and c3
-result = minimize(neg_U, initial_guess, args=(r, w), method='SLSQP') #minimize is a function that minimizes a function. It uses the SLSQP method to find the solution.
-
-
-# Extract results
-optimal_c2, optimal_c3 = result.x #result.x is an array of the solutions to the optimization problem.
-optimal_c1 = rhs - optimal_c2 / (1 + r) - optimal_c3 / ((1 + r)**2) #solving for c1
-optimal_utility = neg_U([optimal_c2, optimal_c3],r,w) #negative utility function
-
-print(f"Optimal consumption:\noptimal c1 = {optimal_c1:.4f}, optimal c2 = {optimal_c2:.4f}, optimal c3 = {optimal_c3:.4f}\nMaximum utility = {optimal_utility:.4f}") #print the optimal consumption and maximum utility
-
-# --- Plot 1: Utility vs. Interest Rate ---
-r_vals = np.linspace(0.001, 0.2, 50) #create an array of interest rates
-utilities_r = [optimize(r, w=1.0) for r in r_vals] #optimize the utility function given the interest rate and wage rate
+r, w = 0, 1
+rhs = w + w / (1 + r) 
+initial_guess = [0.3, 0.3] 
+result = minimize(neg_U, initial_guess, args=(r, w), method='SLSQP') 
+optimal_c2, optimal_c3 = result.x 
+optimal_c1 = rhs - optimal_c2 / (1 + r) - optimal_c3 / ((1 + r)**2) 
+optimal_utility = neg_U([optimal_c2, optimal_c3],r,w) 
+print(f"Optimal consumption:\noptimal c1 = {optimal_c1:.4f}, optimal c2 = {optimal_c2:.4f}, optimal c3 = {optimal_c3:.4f}\nMaximum utility = {optimal_utility:.4f}") 
+r_vals = np.linspace(0.001, 0.2, 50) 
+utilities_r = [optimize(r, w=1.0) for r in r_vals] 
 plt.figure(figsize=(8, 5)) 
-plt.plot(r_vals, utilities_r, label='Utility vs. Interest Rate', color='blue') 
-plt.xlabel('Interest Rate (r)') 
-plt.ylabel('Max Utility') 
-plt.title('Utility as a Function of Interest Rate') 
+plt.plot(r_vals, utilities_r) 
+plt.xlabel('(r)') 
+plt.ylabel('U*') 
+plt.title('U(r)') 
 plt.grid(True) 
-plt.legend() 
-plt.tight_layout()
 plt.show()
 w_vals = np.linspace(0.5, 2.0, 50) 
 utilities_w = [optimize(r=0.05, w=w) for w in w_vals] 
 plt.figure(figsize=(8, 5)) 
-plt.plot(w_vals, utilities_w, label='Utility vs. Wage Rate', color='green') 
-plt.xlabel('Wage Rate (w)') 
-plt.ylabel('Max Utility') 
-plt.title('Utility as a Function of Wage Rate') 
+plt.plot(w_vals, utilities_w) 
+plt.xlabel('w') 
+plt.ylabel('U*') 
+plt.title('U(w)') 
 plt.grid(True) 
-plt.legend() 
-plt.tight_layout()
 plt.show()
 
 #2.7
@@ -157,14 +124,11 @@ tau_opt = result.x
 T_opt = polynomial(tau_opt) 
 print(f"τ* = {tau_opt:.4f}")
 print(f"T(τ*) = {T_opt:.4f}")
-plt.plot(tau_range, T_vals, label="Interpolated Revenue Function") 
-plt.scatter(tau, T, color='red', label="Data Points") 
-plt.xlabel("Tax Rate (τ)") 
-plt.ylabel("Tax Revenue T(τ)") 
-plt.title("Interpolated Tax Revenue Function") 
+plt.plot(tau_range, T_vals) 
+plt.scatter(tau, T, color='red') 
+plt.xlabel("τ") 
+plt.ylabel("T(τ)") 
 plt.grid(True) 
-plt.legend()
-plt.tight_layout()
 plt.show()
 
 #2.9
@@ -200,14 +164,10 @@ P_eq_guess = 1.0
 P_eq, = fsolve(ed, P_eq_guess)
 Q_eq = D(P_eq)
 plt.figure(figsize=(10, 6)) 
-plt.plot(P_fine, D(P_fine), label="Market Demand D(P)") 
-plt.plot(P_fine, m * q_interp, label="Aggregate Supply (m*q(P))") 
-plt.xlabel("Price") 
-plt.ylabel("Quantity") 
-plt.title("Market Demand and Aggregate Supply") 
-plt.legend() 
-plt.grid(True) 
-plt.savefig('cournot_plot.png', dpi=300, bbox_inches='tight')
+plt.plot(P_fine, D(P_fine)) 
+plt.plot(P_fine, m * q_interp) 
+plt.xlabel("P") 
+plt.ylabel("Q") 
 plt.show()
 print(f"Equilibrium price: {P_eq:.4f}, Quantity: {Q_eq:.4f}")
 print("Increasing m leads to more competition, pushing price down and quantity up.\nIncreasing α makes costs higher, reducing supply and increasing price.\nIncreasing η makes demand more elastic: flattens demand, leading to more responsive price changes.") 
