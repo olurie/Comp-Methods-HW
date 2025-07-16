@@ -1,0 +1,335 @@
+Cursor (1.96.2, undefined, desktop)
+Jupyter Extension Version: 2024.11.0.
+Python Extension Version: 2025.6.1.
+Pylance Extension Version: 2024.8.1.
+Platform: win32 (x64).
+Temp Storage folder ~\AppData\Roaming\Cursor\User\globalStorage\ms-toolsai.jupyter\version-2024.11.0
+Workspace folder ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW, Home = c:\Users\oluri
+17:45:52.435 [info] Starting Kernel (Python Path: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe, Unknown, 3.10.11) for '~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb' (disableUI=true)
+17:45:52.652 [warn] Failed to get activated env vars for ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe in 218ms
+17:45:52.791 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -c "import site;print("USER_BASE_VALUE");print(site.USER_SITE);print("USER_BASE_VALUE");"
+17:45:52.793 [warn] Failed to get activated env vars for ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe in 292ms
+17:45:54.338 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -m pip list
+17:45:54.356 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -c "import ipykernel; print(ipykernel.__version__); print("5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d"); print(ipykernel.__file__)"
+17:45:54.374 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\pythonFiles\vscode_datascience_helpers\kernel_interrupt_daemon.py --ppid 2532
+    > cwd: ~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\pythonFiles\vscode_datascience_helpers
+17:45:54.661 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -m ipykernel_launcher --f=c:\Users\~\AppData\Roaming\jupyter\runtime\kernel-v39336c476a6f7477c1eaa186507986f5244b85488.json
+    > cwd: ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3
+17:46:03.281 [info] Kernel successfully started
+17:46:03.291 [warn] Failed to get activated env vars for ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe in 8ms
+17:46:03.306 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\pythonFiles\printJupyterDataDir.py
+17:48:55.444 [warn] Cell completed with errors [iu [Error]: name 'np' is not defined
+	at n.execute (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:297:4958)] {
+  ename: 'NameError',
+  evalue: "name 'np' is not defined",
+  traceback: [
+    '\x1B[1;31m---------------------------------------------------------------------------\x1B[0m',
+    '\x1B[1;31mNameError\x1B[0m                                 Traceback (most recent call last)',
+    'Cell \x1B[1;32mIn[1], line 332\x1B[0m\n' +
+      '\x1B[0;32m    328\x1B[0m         plt\x1B[38;5;241m.\x1B[39mshow()\n' +
+      '\x1B[0;32m    331\x1B[0m \x1B[38;5;28;01mif\x1B[39;00m \x1B[38;5;18m__name__\x1B[39m \x1B[38;5;241m==\x1B[39m \x1B[38;5;124m"\x1B[39m\x1B[38;5;124m__main__\x1B[39m\x1B[38;5;124m"\x1B[39m:\n' +
+      '\x1B[1;32m--> 332\x1B[0m     model \x1B[38;5;241m=\x1B[39m \x1B[43mHansenModel\x1B[49m\x1B[43m(\x1B[49m\x1B[43m)\x1B[49m\n' +
+      '\x1B[0;32m    333\x1B[0m     model\x1B[38;5;241m.\x1B[39msolve()\n' +
+      '\x1B[0;32m    334\x1B[0m     model\x1B[38;5;241m.\x1B[39mreport()\n',
+    'Cell \x1B[1;32mIn[1], line 23\x1B[0m, in \x1B[0;36mHansenModel.__init__\x1B[1;34m(self)\x1B[0m\n' +
+      '\x1B[0;32m     21\x1B[0m \x1B[38;5;28mself\x1B[39m\x1B[38;5;241m.\x1B[39mnumber_of_shock_states \x1B[38;5;241m=\x1B[39m \x1B[38;5;241m21\x1B[39m  \x1B[38;5;66;03m# number of shock states\x1B[39;00m\n' +
+      '\x1B[0;32m     22\x1B[0m \x1B[38;5;28mself\x1B[39m\x1B[38;5;241m.\x1B[39mnumber_of_capital_grid_points \x1B[38;5;241m=\x1B[39m \x1B[38;5;241m100\x1B[39m  \x1B[38;5;66;03m# number of capital grid points\x1B[39;00m\n' +
+      '\x1B[1;32m---> 23\x1B[0m \x1B[38;5;28mself\x1B[39m\x1B[38;5;241m.\x1B[39meta \x1B[38;5;241m=\x1B[39m \x1B[43mnp\x1B[49m\x1B[38;5;241m.\x1B[39mzeros(\x1B[38;5;28mself\x1B[39m\x1B[38;5;241m.\x1B[39mnumber_of_shock_states)\n' +
+      '\x1B[0;32m     24\x1B[0m \x1B[38;5;28mself\x1B[39m\x1B[38;5;241m.\x1B[39mpi \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mzeros((\x1B[38;5;28mself\x1B[39m\x1B[38;5;241m.\x1B[39mnumber_of_shock_states, \x1B[38;5;28mself\x1B[39m\x1B[38;5;241m.\x1B[39mnumber_of_shock_states))\n' +
+      '\x1B[0;32m     26\x1B[0m \x1B[38;5;66;03m# Grids and policy functions\x1B[39;00m\n',
+    "\x1B[1;31mNameError\x1B[0m: name 'np' is not defined"
+  ]
+}
+17:49:03.481 [info] Interrupt kernel execution
+17:49:03.481 [info] Interrupt requested ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+17:49:03.481 [info] Interrupt kernel execution
+17:49:03.481 [info] Interrupting kernel: python31011jvsc74a57bd04e79ad6821d51ecad4406e8544a7e4d2fc75ed8e5b94103695a0d11c5bf4e1a2
+17:49:03.481 [info] Interrupting kernel via custom event (Win32)
+17:49:04.191 [warn] Cell completed with errors (cancelled)
+17:49:04.192 [warn] Cancel all remaining cells due to cancellation or failure in execution
+17:49:04.193 [info] Interrupt requested & sent for ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb in notebookEditor.
+17:49:51.672 [info] Interrupt kernel execution
+17:49:51.672 [info] Interrupt requested ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+17:49:51.673 [info] Interrupt kernel execution
+17:49:51.673 [info] Interrupting kernel: python31011jvsc74a57bd04e79ad6821d51ecad4406e8544a7e4d2fc75ed8e5b94103695a0d11c5bf4e1a2
+17:49:51.673 [info] Interrupting kernel via custom event (Win32)
+17:49:51.826 [warn] Cell completed with errors (cancelled)
+17:49:51.828 [info] Interrupt requested & sent for ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb in notebookEditor.
+01:16:53.335 [warn] Cell completed with errors [iu [Error]: name 'itermax' is not defined
+	at n.execute (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:297:4958)] {
+  ename: 'NameError',
+  evalue: "name 'itermax' is not defined",
+  traceback: [
+    '\x1B[1;31m---------------------------------------------------------------------------\x1B[0m',
+    '\x1B[1;31mNameError\x1B[0m                                 Traceback (most recent call last)',
+    'Cell \x1B[1;32mIn[13], line 64\x1B[0m\n' +
+      '\x1B[0;32m     62\x1B[0m K_guess \x1B[38;5;241m=\x1B[39m \x1B[38;5;241m20\x1B[39m  \x1B[38;5;66;03m# initial guess\x1B[39;00m\n' +
+      '\x1B[0;32m     63\x1B[0m r, w \x1B[38;5;241m=\x1B[39m get_prices(K_guess)\n' +
+      '\x1B[1;32m---> 64\x1B[0m policy_a \x1B[38;5;241m=\x1B[39m \x1B[43msolve_household\x1B[49m\x1B[43m(\x1B[49m\x1B[43mtau\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mr\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mw\x1B[49m\x1B[43m)\x1B[49m\n' +
+      '\x1B[0;32m     65\x1B[0m assets \x1B[38;5;241m=\x1B[39m simulate_distribution(policy_a)\n' +
+      '\x1B[0;32m     66\x1B[0m GDP \x1B[38;5;241m=\x1B[39m K_guess\x1B[38;5;241m*\x1B[39m\x1B[38;5;241m*\x1B[39malpha  \x1B[38;5;66;03m# since L=1\x1B[39;00m\n',
+    'Cell \x1B[1;32mIn[13], line 26\x1B[0m, in \x1B[0;36msolve_household\x1B[1;34m(tau, r, w)\x1B[0m\n' +
+      '\x1B[0;32m     23\x1B[0m V \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mzeros((a_size, \x1B[38;5;28mlen\x1B[39m(y_vals)))\n' +
+      '\x1B[0;32m     24\x1B[0m policy_a \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mzeros_like(V)\n' +
+      '\x1B[1;32m---> 26\x1B[0m \x1B[38;5;28;01mfor\x1B[39;00m it \x1B[38;5;129;01min\x1B[39;00m \x1B[38;5;28mrange\x1B[39m(\x1B[43mitermax\x1B[49m):\n' +
+      '\x1B[0;32m     27\x1B[0m     V_new \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mzeros_like(V)\n' +
+      '\x1B[0;32m     28\x1B[0m     \x1B[38;5;28;01mfor\x1B[39;00m iy, y \x1B[38;5;129;01min\x1B[39;00m \x1B[38;5;28menumerate\x1B[39m(y_vals):\n',
+    "\x1B[1;31mNameError\x1B[0m: name 'itermax' is not defined"
+  ]
+}
+14:49:53.404 [warn] Cell completed with errors [iu [Error]: name 'InterpolatedUnivariateSpline' is not defined
+	at n.execute (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:297:4958)] {
+  ename: 'NameError',
+  evalue: "name 'InterpolatedUnivariateSpline' is not defined",
+  traceback: [
+    '\x1B[1;31m---------------------------------------------------------------------------\x1B[0m',
+    '\x1B[1;31mNameError\x1B[0m                                 Traceback (most recent call last)',
+    'Cell \x1B[1;32mIn[15], line 21\x1B[0m\n' +
+      '\x1B[0;32m     19\x1B[0m \x1B[38;5;66;03m# Iteration loop\x1B[39;00m\n' +
+      '\x1B[0;32m     20\x1B[0m \x1B[38;5;28;01mfor\x1B[39;00m i \x1B[38;5;129;01min\x1B[39;00m \x1B[38;5;28mrange\x1B[39m(iterations):\n' +
+      '\x1B[1;32m---> 21\x1B[0m     spline_consumption \x1B[38;5;241m=\x1B[39m \x1B[43mInterpolatedUnivariateSpline\x1B[49m(capital_grid, consumption_grid, k\x1B[38;5;241m=\x1B[39m\x1B[38;5;241m3\x1B[39m)\n' +
+      '\x1B[0;32m     23\x1B[0m     consumption_new \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mzeros_like(consumption_grid)\n' +
+      '\x1B[0;32m     25\x1B[0m     \x1B[38;5;28;01mfor\x1B[39;00m j \x1B[38;5;129;01min\x1B[39;00m \x1B[38;5;28mrange\x1B[39m(\x1B[38;5;28mlen\x1B[39m(capital_grid)):\n',
+    "\x1B[1;31mNameError\x1B[0m: name 'InterpolatedUnivariateSpline' is not defined"
+  ]
+}
+14:50:18.549 [info] Interrupt kernel execution
+14:50:18.549 [info] Interrupt requested ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+14:50:18.549 [info] Interrupt kernel execution
+14:50:18.549 [info] Interrupting kernel: python31011jvsc74a57bd04e79ad6821d51ecad4406e8544a7e4d2fc75ed8e5b94103695a0d11c5bf4e1a2
+14:50:18.549 [info] Interrupting kernel via custom event (Win32)
+14:50:18.797 [warn] Cell completed with errors (cancelled)
+14:50:18.799 [info] Interrupt requested & sent for ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb in notebookEditor.
+14:51:56.162 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+14:51:56.162 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+14:55:10.369 [info] Too many pending requests 1 for kernel 2b80f940-6116-4171-9f7d-82b094b9d3f2, waiting for it to be ready.
+14:55:43.151 [warn] Cell completed with errors [iu [Error]: f(a) and f(b) must have different signs
+	at n.execute (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:297:4958)] {
+  ename: 'ValueError',
+  evalue: 'f(a) and f(b) must have different signs',
+  traceback: [
+    '\x1B[1;31m---------------------------------------------------------------------------\x1B[0m',
+    '\x1B[1;31mValueError\x1B[0m                                Traceback (most recent call last)',
+    'Cell \x1B[1;32mIn[20], line 39\x1B[0m\n' +
+      '\x1B[0;32m     36\x1B[0m     consumption_new[j] \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mclip(consumption_grid[j], cons_min, cons_max)\n' +
+      '\x1B[0;32m     37\x1B[0m     \x1B[38;5;28;01mcontinue\x1B[39;00m\n' +
+      '\x1B[1;32m---> 39\x1B[0m result \x1B[38;5;241m=\x1B[39m \x1B[43mroot_scalar\x1B[49m\x1B[43m(\x1B[49m\x1B[43minspect_foc\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43margs\x1B[49m\x1B[38;5;241;43m=\x1B[39;49m\x1B[43m(\x1B[49m\x1B[43mj\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mspline_consumption\x1B[49m\x1B[43m)\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mbracket\x1B[49m\x1B[38;5;241;43m=\x1B[39;49m\x1B[43m(\x1B[49m\x1B[43mcons_min\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mcons_max\x1B[49m\x1B[43m)\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mmethod\x1B[49m\x1B[38;5;241;43m=\x1B[39;49m\x1B[38;5;124;43m"\x1B[39;49m\x1B[38;5;124;43mbrentq\x1B[39;49m\x1B[38;5;124;43m"\x1B[39;49m\x1B[43m)\x1B[49m\n' +
+      '\x1B[0;32m     40\x1B[0m \x1B[38;5;28;01mif\x1B[39;00m result\x1B[38;5;241m.\x1B[39mconverged:\n' +
+      '\x1B[0;32m     41\x1B[0m     consumption_new[j] \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mclip(result\x1B[38;5;241m.\x1B[39mroot, cons_min, cons_max)\n',
+    'File \x1B[1;32m~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\scipy\\optimize\\_root_scalar.py:286\x1B[0m, in \x1B[0;36mroot_scalar\x1B[1;34m(f, args, method, bracket, fprime, fprime2, x0, x1, xtol, rtol, maxiter, options)\x1B[0m\n' +
+      '\x1B[0;32m    284\x1B[0m a, b \x1B[38;5;241m=\x1B[39m bracket[:\x1B[38;5;241m2\x1B[39m]\n' +
+      '\x1B[0;32m    285\x1B[0m \x1B[38;5;28;01mtry\x1B[39;00m:\n' +
+      '\x1B[1;32m--> 286\x1B[0m     r, sol \x1B[38;5;241m=\x1B[39m methodc(f, a, b, args\x1B[38;5;241m=\x1B[39margs, \x1B[38;5;241m*\x1B[39m\x1B[38;5;241m*\x1B[39mkwargs)\n' +
+      '\x1B[0;32m    287\x1B[0m \x1B[38;5;28;01mexcept\x1B[39;00m \x1B[38;5;167;01mValueError\x1B[39;00m \x1B[38;5;28;01mas\x1B[39;00m e:\n' +
+      '\x1B[0;32m    288\x1B[0m     \x1B[38;5;66;03m# gh-17622 fixed some bugs in low-level solvers by raising an error\x1B[39;00m\n' +
+      '\x1B[0;32m    289\x1B[0m     \x1B[38;5;66;03m# (rather than returning incorrect results) when the callable\x1B[39;00m\n' +
+      '\x1B[0;32m    290\x1B[0m     \x1B[38;5;66;03m# returns a NaN. It did so by wrapping the callable rather than\x1B[39;00m\n' +
+      '\x1B[0;32m    291\x1B[0m     \x1B[38;5;66;03m# modifying compiled code, so the iteration count is not available.\x1B[39;00m\n' +
+      '\x1B[0;32m    292\x1B[0m     \x1B[38;5;28;01mif\x1B[39;00m \x1B[38;5;28mhasattr\x1B[39m(e, \x1B[38;5;124m"\x1B[39m\x1B[38;5;124m_x\x1B[39m\x1B[38;5;124m"\x1B[39m):\n',
+    'File \x1B[1;32m~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\scipy\\optimize\\_zeros_py.py:798\x1B[0m, in \x1B[0;36mbrentq\x1B[1;34m(f, a, b, args, xtol, rtol, maxiter, full_output, disp)\x1B[0m\n' +
+      '\x1B[0;32m    796\x1B[0m     \x1B[38;5;28;01mraise\x1B[39;00m \x1B[38;5;167;01mValueError\x1B[39;00m(\x1B[38;5;124mf\x1B[39m\x1B[38;5;124m"\x1B[39m\x1B[38;5;124mrtol too small (\x1B[39m\x1B[38;5;132;01m{\x1B[39;00mrtol\x1B[38;5;132;01m:\x1B[39;00m\x1B[38;5;124mg\x1B[39m\x1B[38;5;132;01m}\x1B[39;00m\x1B[38;5;124m < \x1B[39m\x1B[38;5;132;01m{\x1B[39;00m_rtol\x1B[38;5;132;01m:\x1B[39;00m\x1B[38;5;124mg\x1B[39m\x1B[38;5;132;01m}\x1B[39;00m\x1B[38;5;124m)\x1B[39m\x1B[38;5;124m"\x1B[39m)\n' +
+      '\x1B[0;32m    797\x1B[0m f \x1B[38;5;241m=\x1B[39m _wrap_nan_raise(f)\n' +
+      '\x1B[1;32m--> 798\x1B[0m r \x1B[38;5;241m=\x1B[39m \x1B[43m_zeros\x1B[49m\x1B[38;5;241;43m.\x1B[39;49m\x1B[43m_brentq\x1B[49m\x1B[43m(\x1B[49m\x1B[43mf\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43ma\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mb\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mxtol\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mrtol\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mmaxiter\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43margs\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mfull_output\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mdisp\x1B[49m\x1B[43m)\x1B[49m\n' +
+      '\x1B[0;32m    799\x1B[0m \x1B[38;5;28;01mreturn\x1B[39;00m results_c(full_output, r, \x1B[38;5;124m"\x1B[39m\x1B[38;5;124mbrentq\x1B[39m\x1B[38;5;124m"\x1B[39m)\n',
+    '\x1B[1;31mValueError\x1B[0m: f(a) and f(b) must have different signs'
+  ]
+}
+14:57:55.811 [warn] Cell completed with errors [iu [Error]: inspect_foc() takes 2 positional arguments but 3 were given
+	at n.execute (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:297:4958)] {
+  ename: 'TypeError',
+  evalue: 'inspect_foc() takes 2 positional arguments but 3 were given',
+  traceback: [
+    '\x1B[1;31m---------------------------------------------------------------------------\x1B[0m',
+    '\x1B[1;31mTypeError\x1B[0m                                 Traceback (most recent call last)',
+    'Cell \x1B[1;32mIn[21], line 39\x1B[0m\n' +
+      '\x1B[0;32m     36\x1B[0m     consumption_new[j] \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mclip(consumption_grid[j], cons_min, cons_max)\n' +
+      '\x1B[0;32m     37\x1B[0m     \x1B[38;5;28;01mcontinue\x1B[39;00m\n' +
+      '\x1B[1;32m---> 39\x1B[0m result \x1B[38;5;241m=\x1B[39m \x1B[43mroot_scalar\x1B[49m\x1B[43m(\x1B[49m\x1B[43minspect_foc\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43margs\x1B[49m\x1B[38;5;241;43m=\x1B[39;49m\x1B[43m(\x1B[49m\x1B[43mj\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mspline_consumption\x1B[49m\x1B[43m)\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mbracket\x1B[49m\x1B[38;5;241;43m=\x1B[39;49m\x1B[43m(\x1B[49m\x1B[43mcons_min\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mcons_max\x1B[49m\x1B[43m)\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mmethod\x1B[49m\x1B[38;5;241;43m=\x1B[39;49m\x1B[38;5;124;43m"\x1B[39;49m\x1B[38;5;124;43mbrentq\x1B[39;49m\x1B[38;5;124;43m"\x1B[39;49m\x1B[43m)\x1B[49m\n' +
+      '\x1B[0;32m     40\x1B[0m \x1B[38;5;28;01mif\x1B[39;00m result\x1B[38;5;241m.\x1B[39mconverged:\n' +
+      '\x1B[0;32m     41\x1B[0m     consumption_new[j] \x1B[38;5;241m=\x1B[39m np\x1B[38;5;241m.\x1B[39mclip(result\x1B[38;5;241m.\x1B[39mroot, cons_min, cons_max)\n',
+    'File \x1B[1;32m~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\scipy\\optimize\\_root_scalar.py:286\x1B[0m, in \x1B[0;36mroot_scalar\x1B[1;34m(f, args, method, bracket, fprime, fprime2, x0, x1, xtol, rtol, maxiter, options)\x1B[0m\n' +
+      '\x1B[0;32m    284\x1B[0m a, b \x1B[38;5;241m=\x1B[39m bracket[:\x1B[38;5;241m2\x1B[39m]\n' +
+      '\x1B[0;32m    285\x1B[0m \x1B[38;5;28;01mtry\x1B[39;00m:\n' +
+      '\x1B[1;32m--> 286\x1B[0m     r, sol \x1B[38;5;241m=\x1B[39m methodc(f, a, b, args\x1B[38;5;241m=\x1B[39margs, \x1B[38;5;241m*\x1B[39m\x1B[38;5;241m*\x1B[39mkwargs)\n' +
+      '\x1B[0;32m    287\x1B[0m \x1B[38;5;28;01mexcept\x1B[39;00m \x1B[38;5;167;01mValueError\x1B[39;00m \x1B[38;5;28;01mas\x1B[39;00m e:\n' +
+      '\x1B[0;32m    288\x1B[0m     \x1B[38;5;66;03m# gh-17622 fixed some bugs in low-level solvers by raising an error\x1B[39;00m\n' +
+      '\x1B[0;32m    289\x1B[0m     \x1B[38;5;66;03m# (rather than returning incorrect results) when the callable\x1B[39;00m\n' +
+      '\x1B[0;32m    290\x1B[0m     \x1B[38;5;66;03m# returns a NaN. It did so by wrapping the callable rather than\x1B[39;00m\n' +
+      '\x1B[0;32m    291\x1B[0m     \x1B[38;5;66;03m# modifying compiled code, so the iteration count is not available.\x1B[39;00m\n' +
+      '\x1B[0;32m    292\x1B[0m     \x1B[38;5;28;01mif\x1B[39;00m \x1B[38;5;28mhasattr\x1B[39m(e, \x1B[38;5;124m"\x1B[39m\x1B[38;5;124m_x\x1B[39m\x1B[38;5;124m"\x1B[39m):\n',
+    'File \x1B[1;32m~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\scipy\\optimize\\_zeros_py.py:798\x1B[0m, in \x1B[0;36mbrentq\x1B[1;34m(f, a, b, args, xtol, rtol, maxiter, full_output, disp)\x1B[0m\n' +
+      '\x1B[0;32m    796\x1B[0m     \x1B[38;5;28;01mraise\x1B[39;00m \x1B[38;5;167;01mValueError\x1B[39;00m(\x1B[38;5;124mf\x1B[39m\x1B[38;5;124m"\x1B[39m\x1B[38;5;124mrtol too small (\x1B[39m\x1B[38;5;132;01m{\x1B[39;00mrtol\x1B[38;5;132;01m:\x1B[39;00m\x1B[38;5;124mg\x1B[39m\x1B[38;5;132;01m}\x1B[39;00m\x1B[38;5;124m < \x1B[39m\x1B[38;5;132;01m{\x1B[39;00m_rtol\x1B[38;5;132;01m:\x1B[39;00m\x1B[38;5;124mg\x1B[39m\x1B[38;5;132;01m}\x1B[39;00m\x1B[38;5;124m)\x1B[39m\x1B[38;5;124m"\x1B[39m)\n' +
+      '\x1B[0;32m    797\x1B[0m f \x1B[38;5;241m=\x1B[39m _wrap_nan_raise(f)\n' +
+      '\x1B[1;32m--> 798\x1B[0m r \x1B[38;5;241m=\x1B[39m \x1B[43m_zeros\x1B[49m\x1B[38;5;241;43m.\x1B[39;49m\x1B[43m_brentq\x1B[49m\x1B[43m(\x1B[49m\x1B[43mf\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43ma\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mb\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mxtol\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mrtol\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mmaxiter\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43margs\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mfull_output\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[43mdisp\x1B[49m\x1B[43m)\x1B[49m\n' +
+      '\x1B[0;32m    799\x1B[0m \x1B[38;5;28;01mreturn\x1B[39;00m results_c(full_output, r, \x1B[38;5;124m"\x1B[39m\x1B[38;5;124mbrentq\x1B[39m\x1B[38;5;124m"\x1B[39m)\n',
+    'File \x1B[1;32m~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python310\\site-packages\\scipy\\optimize\\_zeros_py.py:94\x1B[0m, in \x1B[0;36m_wrap_nan_raise.<locals>.f_raise\x1B[1;34m(x, *args)\x1B[0m\n' +
+      '\x1B[0;32m     93\x1B[0m \x1B[38;5;28;01mdef\x1B[39;00m\x1B[38;5;250m \x1B[39m\x1B[38;5;21mf_raise\x1B[39m(x, \x1B[38;5;241m*\x1B[39margs):\n' +
+      '\x1B[1;32m---> 94\x1B[0m     fx \x1B[38;5;241m=\x1B[39m \x1B[43mf\x1B[49m\x1B[43m(\x1B[49m\x1B[43mx\x1B[49m\x1B[43m,\x1B[49m\x1B[43m \x1B[49m\x1B[38;5;241;43m*\x1B[39;49m\x1B[43margs\x1B[49m\x1B[43m)\x1B[49m\n' +
+      '\x1B[0;32m     95\x1B[0m     f_raise\x1B[38;5;241m.\x1B[39m_function_calls \x1B[38;5;241m+\x1B[39m\x1B[38;5;241m=\x1B[39m \x1B[38;5;241m1\x1B[39m\n' +
+      '\x1B[0;32m     96\x1B[0m     \x1B[38;5;28;01mif\x1B[39;00m np\x1B[38;5;241m.\x1B[39misnan(fx):\n',
+    '\x1B[1;31mTypeError\x1B[0m: inspect_foc() takes 2 positional arguments but 3 were given'
+  ]
+}
+09:30:31.918 [info] Starting Kernel (Python Path: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe, Unknown, 3.10.11) for '~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW2\HW2.ipynb' (disableUI=true)
+09:30:32.021 [warn] Failed to get activated env vars for ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe in 99ms
+09:30:32.111 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -m pip list
+09:30:32.112 [warn] Failed to get activated env vars for ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe in 181ms
+09:30:32.132 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -c "import ipykernel; print(ipykernel.__version__); print("5dc3a68c-e34e-4080-9c3e-2a532b2ccb4d"); print(ipykernel.__file__)"
+09:30:32.151 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -m ipykernel_launcher --f=c:\Users\~\AppData\Roaming\jupyter\runtime\kernel-v384e799486f45a921e38fefd3ee437eb37ecd81cb.json
+    > cwd: ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW2
+09:30:43.142 [info] Kernel successfully started
+09:32:04.232 [warn] Cell completed with errors [iu [Error]: unexpected character after line continuation character (1452599038.py, line 1)
+	at n.execute (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:297:4958)] {
+  ename: 'SyntaxError',
+  evalue: 'unexpected character after line continuation character (1452599038.py, line 1)',
+  traceback: [
+    '\x1B[1;36m  Cell \x1B[1;32mIn[39], line 1\x1B[1;36m\x1B[0m\n' +
+      '\x1B[1;33m    \\section*{Solution}\x1B[0m\n' +
+      '\x1B[1;37m     ^\x1B[0m\n' +
+      '\x1B[1;31mSyntaxError\x1B[0m\x1B[1;31m:\x1B[0m unexpected character after line continuation character\n'
+  ]
+}
+09:32:16.754 [warn] Cell completed with errors [iu [Error]: unexpected character after line continuation character (4285090721.py, line 1)
+	at n.execute (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:297:4958)] {
+  ename: 'SyntaxError',
+  evalue: 'unexpected character after line continuation character (4285090721.py, line 1)',
+  traceback: [
+    '\x1B[1;36m  Cell \x1B[1;32mIn[40], line 1\x1B[1;36m\x1B[0m\n' +
+      '\x1B[1;33m    \\section*{Solution}\x1B[0m\n' +
+      '\x1B[1;37m     ^\x1B[0m\n' +
+      '\x1B[1;31mSyntaxError\x1B[0m\x1B[1;31m:\x1B[0m unexpected character after line continuation character\n'
+  ]
+}
+09:32:50.181 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+09:32:50.181 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.949 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.950 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.951 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.951 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.951 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.951 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:13:54.987 [info] Disposing request as the cell (-1) was deleted ~\OneDrive - Fachhochschule Aachen\Documents\GitHub\Comp-Methods-HW\HW3\HW3.ipynb
+10:22:17.880 [warn] Failed to get activated env vars for ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe in 5ms
+10:22:17.896 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -c "import nbconvert;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+10:22:22.967 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -c "import jupyter;print('6af208d0-cb9c-427f-b937-ff563e17efdf')"
+10:22:23.071 [warn] Failed to get activated env vars for ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe in 7ms
+10:22:23.086 [info] Process Execution: ~\AppData\Local\Microsoft\WindowsApps\python3.10.exe -m jupyter nbconvert c:\Users\~\AppData\Local\Temp\e90123ca-ad98-4115-9b8e-6936215b3fbc\HW3.ipynb --to pdf --output tmp-2532e3vnMoobIF59.pdf --output-dir C:\Users\~\AppData\Local\Temp --debug
+10:22:25.340 [error] Export failed [Error: [NbConvertApp] Searching ['C:\\Users\\~\\.jupyter', 'C:\\Users\\~\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\\LocalCache\\local-packages\\etc\\jupyter', 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\\etc\\jupyter', 'C:\\ProgramData\\jupyter'] for config files
+[NbConvertApp] Looking for jupyter_config in C:\ProgramData\jupyter
+[NbConvertApp] Looking for jupyter_config in C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\etc\jupyter
+[NbConvertApp] Looking for jupyter_config in C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\etc\jupyter
+[NbConvertApp] Looking for jupyter_config in C:\Users\~\.jupyter
+[NbConvertApp] Looking for jupyter_nbconvert_config in C:\ProgramData\jupyter
+[NbConvertApp] Looking for jupyter_nbconvert_config in C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\etc\jupyter
+[NbConvertApp] Looking for jupyter_nbconvert_config in C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\etc\jupyter
+[NbConvertApp] Looking for jupyter_nbconvert_config in C:\Users\~\.jupyter
+[NbConvertApp] Looping through config variables with prefix "JUPYTER_NBCONVERT"
+[NbConvertApp] Converting notebook c:\Users\~\AppData\Local\Temp\e90123ca-ad98-4115-9b8e-6936215b3fbc\HW3.ipynb to pdf
+[NbConvertApp] Notebook name is 'tmp-2532e3vnMoobIF59'
+[NbConvertApp] Template paths:
+	C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex
+	C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\base
+	C:\Users\~\AppData\Roaming\jupyter
+	C:\Users\~\AppData\Roaming\jupyter\nbconvert\templates
+	C:\Users\~\AppData\Roaming\jupyter\nbconvert\templates\compatibility
+	C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter
+	C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates
+	C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\compatibility
+	C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\share\jupyter
+	C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\share\jupyter\nbconvert\templates
+	C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\share\jupyter\nbconvert\templates\compatibility
+	C:\ProgramData\jupyter
+	C:\ProgramData\jupyter\nbconvert\templates
+	C:\ProgramData\jupyter\nbconvert\templates\compatibility
+	C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates
+[NbConvertApp] Applying preprocessor: TagRemovePreprocessor
+[NbConvertApp] Applying preprocessor: RegexRemovePreprocessor
+[NbConvertApp] Applying preprocessor: SVG2PDFPreprocessor
+[NbConvertApp] Applying preprocessor: LatexPreprocessor
+[NbConvertApp] Applying preprocessor: HighlightMagicsPreprocessor
+[NbConvertApp] Applying preprocessor: ExtractOutputPreprocessor
+[NbConvertApp] Applying preprocessor: ExtractAttachmentsPreprocessor
+[NbConvertApp] Attempting to load template index.tex.j2
+[NbConvertApp]     template_paths: C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex;C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\base;C:\Users\~\AppData\Roaming\jupyter;C:\Users\~\AppData\Roaming\jupyter\nbconvert\templates;C:\Users\~\AppData\Roaming\jupyter\nbconvert\templates\compatibility;C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter;C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates;C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\compatibility;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\share\jupyter;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\share\jupyter\nbconvert\templates;C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.10_3.10.3056.0_x64__qbz5n2kfra8p0\share\jupyter\nbconvert\templates\compatibility;C:\ProgramData\jupyter;C:\ProgramData\jupyter\nbconvert\templates;C:\ProgramData\jupyter\nbconvert\templates\compatibility;C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates
+[NbConvertApp] ERROR | Error while converting 'c:\Users\~\AppData\Local\Temp\e90123ca-ad98-4115-9b8e-6936215b3fbc\HW3.ipynb'
+Traceback (most recent call last):
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\nbconvertapp.py", line 487, in export_single_notebook
+    output, resources = self.exporter.from_filename(
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\exporters\templateexporter.py", line 390, in from_filename
+    return super().from_filename(filename, resources, **kw)  # type:ignore[return-value]
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\exporters\exporter.py", line 201, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\exporters\templateexporter.py", line 396, in from_file
+    return super().from_file(file_stream, resources, **kw)  # type:ignore[return-value]
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\exporters\exporter.py", line 220, in from_file
+    return self.from_notebook_node(
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\exporters\pdf.py", line 184, in from_notebook_node
+    latex, resources = super().from_notebook_node(nb, resources=resources, **kw)
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\exporters\latex.py", line 92, in from_notebook_node
+    return super().from_notebook_node(nb, resources, **kw)
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\exporters\templateexporter.py", line 429, in from_notebook_node
+    output = self.template.render(nb=nb_copy, resources=resources)
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\index.tex.j2", line 8, in top-level template code
+    ((* extends cell_style *))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\style_jupyter.tex.j2", line 176, in top-level template code
+    \prompt{(((prompt)))}{(((prompt_color)))}{(((execution_count)))}{(((extra_space)))}
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\base.tex.j2", line 7, in top-level template code
+    ((*- extends 'document_contents.tex.j2' -*))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\document_contents.tex.j2", line 51, in top-level template code
+    ((*- block figure scoped -*))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\display_priority.j2", line 5, in top-level template code
+    ((*- extends 'null.j2' -*))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\null.j2", line 30, in top-level template code
+    ((*- block body -*))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\base.tex.j2", line 241, in block 'body'
+    ((( super() )))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\null.j2", line 32, in block 'body'
+    ((*- block any_cell scoped -*))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\null.j2", line 85, in block 'any_cell'
+    ((*- block markdowncell scoped-*)) ((*- endblock markdowncell -*))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\share\jupyter\nbconvert\templates\latex\document_contents.tex.j2", line 68, in block 'markdowncell'
+    ((( cell.source | citation2latex | strip_files_prefix | convert_pandoc('markdown+tex_math_double_backslash', 'json',extra_args=[]) | resolve_references | convert_explicitly_relative_paths | convert_pandoc('json','latex'))))
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\filters\pandoc.py", line 36, in convert_pandoc
+    return pandoc(source, from_format, to_format, extra_args=extra_args)
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\utils\pandoc.py", line 50, in pandoc
+    check_pandoc_version()
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\utils\pandoc.py", line 98, in check_pandoc_version
+    v = get_pandoc_version()
+  File "C:\Users\~\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0\LocalCache\local-packages\Python310\site-packages\nbconvert\utils\pandoc.py", line 75, in get_pandoc_version
+    raise PandocMissing()
+nbconvert.utils.pandoc.PandocMissing: Pandoc wasn't found.
+Please check that pandoc is installed:
+https://pandoc.org/installing.html
+[NbConvertApp] Exiting application: jupyter-nbconvert
+
+	at Cf.executeCommand (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:321:9552)
+	at async zT.export (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:322:412)
+	at async kb.performNbConvertExport (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:324:2500)
+	at async kb.performExport (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:324:2190)
+	at async kb.exportImpl (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:324:1798)
+	at async kb.export (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:324:1530)
+	at async C0.export (c:\Users\~\.cursor\extensions\ms-toolsai.jupyter-2024.11.0-universal\dist\extension.node.js:373:3134)
+	at async zit.h (file:///c:/Users/~/AppData/Local/Programs/cursor/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:135:33100)]
+10:22:25.341 [error] If you have not installed xelatex (TeX), you will need to do so before you can export to PDF. For further instructions, please see https://nbconvert.readthedocs.io/en/latest/install.html#installing-tex. 
+To avoid installing xelatex (TeX), you might want to try exporting to HTML and using your browser's "Print to PDF" feature.
